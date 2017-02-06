@@ -16,7 +16,7 @@
     "express": "^4.10.6",
     "mysql": "^2.5.4",
     "socket.io":"^1.7.2"
-  }
+  },
   "bugs": {
     "url": "https://github.com/shaddygarg/bookshare/issues"
   },
