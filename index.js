@@ -2,6 +2,19 @@ var express = require('express');
 var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
+var mysql = require('mysql')
+
+var connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: '9914647680',
+  database: 'book'
+})
+
+connection.connect(function(err) {
+  if (err) throw err
+  console.log('You are now connected...')
+})
 
 app.use(express.static(__dirname + '/public'));
 
