@@ -15,14 +15,14 @@ var connection = mysql.createConnection({
 connection.connect(function(err) {
 	if (err) throw err
 		console.log('You are now connected')
-	connection.query('INSERT into books(isbn,author,img) values (12,12,12)',function(err,results){
+	/*connection.query('INSERT into books(isbn,author,img) values (12,12,12)',function(err,results){
 		if(err) throw err
 			console.log('INSERTED')
 		connection.query('select * from books',function(err,results){
 			if(err) throw err
 				console.log(results)
 		})
-	})
+	})*/
 })
 
 
