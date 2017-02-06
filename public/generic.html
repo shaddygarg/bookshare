@@ -12,6 +12,7 @@
 	</head>
 	<body>
 		<div id="fb-root"></div>
+		<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
 		<script src="assets/js/fblogin.js"></script>
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
@@ -128,6 +129,12 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
-
+			<script>
+				var socket = io();
+				socket.emit('getData' , "getdata");
+				socket.emit('recieveData', function(data){
+					
+				});
+			</script>
 	</body>
 </html>

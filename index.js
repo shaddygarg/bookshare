@@ -109,6 +109,10 @@ io.on('connection', function(socket){
 		console.log(bookname);
 		console.log(author);
 	});
+
+	socket.on('getData', function(data){
+		socket.emit('recieveData' , );
+	});
 });
 
 
