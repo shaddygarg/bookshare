@@ -58,15 +58,6 @@
 										<h4>Blockquote</h4>
 										<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
 										<h4>Preformatted</h4>
-										<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-  print 'Iteration ' + i;
-  deck.shuffle();
-  i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 									</section>
 
 									<section>
@@ -105,37 +96,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 												</ul>
 											</div>
 										</div>
-										<h4>Actions</h4>
-										<div class="row">
-											<div class="6u 12u$(medium)">
-												<ul class="actions">
-													<li><a href="#" class="button special">Default</a></li>
-													<li><a href="#" class="button">Default</a></li>
-												</ul>
-												<ul class="actions small">
-													<li><a href="#" class="button special small">Small</a></li>
-													<li><a href="#" class="button small">Small</a></li>
-												</ul>
-												<ul class="actions vertical">
-													<li><a href="#" class="button special">Default</a></li>
-													<li><a href="#" class="button">Default</a></li>
-												</ul>
-												<ul class="actions vertical small">
-													<li><a href="#" class="button special small">Small</a></li>
-													<li><a href="#" class="button small">Small</a></li>
-												</ul>
-											</div>
-											<div class="6u 12u$(medium)">
-												<ul class="actions vertical">
-													<li><a href="#" class="button special fit">Default</a></li>
-													<li><a href="#" class="button fit">Default</a></li>
-												</ul>
-												<ul class="actions vertical small">
-													<li><a href="#" class="button special small fit">Small</a></li>
-													<li><a href="#" class="button small fit">Small</a></li>
-												</ul>
-											</div>
-										</div>
+										
 									</section>
 
 									<section>
@@ -232,41 +193,17 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 											</table>
 										</div>
 									</section>
-
 									<section>
-										<h3 class="major">Buttons</h3>
-										<ul class="actions">
-											<li><a href="#" class="button special">Special</a></li>
-											<li><a href="#" class="button">Default</a></li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button big">Big</a></li>
-											<li><a href="#" class="button small">Small</a></li>
-										</ul>
-										<ul class="actions fit">
-											<li><a href="#" class="button fit">Fit</a></li>
-											<li><a href="#" class="button special fit">Fit</a></li>
-											<li><a href="#" class="button fit">Fit</a></li>
-										</ul>
-										<ul class="actions fit small">
-											<li><a href="#" class="button special fit small">Fit + Small</a></li>
-											<li><a href="#" class="button fit small">Fit + Small</a></li>
-											<li><a href="#" class="button special fit small">Fit + Small</a></li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button special icon fa-download">Icon</a></li>
-											<li><a href="#" class="button icon fa-download">Icon</a></li>
-										</ul>
-										<ul class="actions">
-											<li><span class="button special disabled">Disabled</span></li>
-											<li><span class="button disabled">Disabled</span></li>
-										</ul>
-									</section>
-
-									<section>
-										<h3 class="major">Form</h3>
+										<h3 class="major">Book Info</h3>
 										<form method="post" action="#">
 											<div class="row uniform">
+												<div class="12u$">
+													<label for="demo-name">ISBN code</label>
+													<input type="text" name="demo-name" id="demo-name" value="" />
+												</div>
+												<div class="12u$">
+													<label for="demo-name">OR</label>
+												</div>
 												<div class="6u 12u$(xsmall)">
 													<label for="demo-name">Name</label>
 													<input type="text" name="demo-name" id="demo-name" value="" />
@@ -275,45 +212,19 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 													<label for="demo-email">Email</label>
 													<input type="email" name="demo-email" id="demo-email" value="" />
 												</div>
-												<div class="12u$">
-													<label for="demo-category">Category</label>
-													<div class="select-wrapper">
-														<select name="demo-category" id="demo-category">
-															<option value="">-</option>
-															<option value="1">Manufacturing</option>
-															<option value="1">Shipping</option>
-															<option value="1">Administration</option>
-															<option value="1">Human Resources</option>
-														</select>
-													</div>
-												</div>
-												<div class="4u 12u$(small)">
+
+												
+												<div class="6u 12u$(small)">
 													<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-													<label for="demo-priority-low">Low Priority</label>
-												</div>
-												<div class="4u 12u$(small)">
-													<input type="radio" id="demo-priority-normal" name="demo-priority">
-													<label for="demo-priority-normal">Normal Priority</label>
-												</div>
-												<div class="4u$ 12u$(small)">
-													<input type="radio" id="demo-priority-high" name="demo-priority">
-													<label for="demo-priority-high">High Priority</label>
+													<label for="demo-priority-low">Switch</label>
 												</div>
 												<div class="6u 12u$(small)">
-													<input type="checkbox" id="demo-copy" name="demo-copy">
-													<label for="demo-copy">Email me a copy</label>
-												</div>
-												<div class="6u$ 12u$(small)">
-													<input type="checkbox" id="demo-human" name="demo-human" checked>
-													<label for="demo-human">Not a robot</label>
-												</div>
-												<div class="12u$">
-													<label for="demo-message">Message</label>
-													<textarea name="demo-message" id="demo-message" rows="6"></textarea>
+													<input type="radio" id="demo-priority-normal" name="demo-priority">
+													<label for="demo-priority-normal">Donate</label>
 												</div>
 												<div class="12u$">
 													<ul class="actions">
-														<li><input type="submit" value="Send Message" class="special" /></li>
+														<li><input type="submit" value="Submit Info" class="special" /></li>
 														<li><input type="reset" value="Reset" /></li>
 													</ul>
 												</div>
