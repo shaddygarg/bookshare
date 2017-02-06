@@ -8,30 +8,15 @@ var mysql = require('mysql');
 var bodyParser = require('body-parser');
 
 
-var connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'yash',
-  database: 'book'
-
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-
-connection.connect(function(err) {
-	if (err) throw err
-		console.log('You are now connected')
-    /*	connection.query('INSERT into books(isbn,author,img) values (12,12,12)',function(err,results){
-		if(err) throw err
-			console.log('INSERTED')
-		connection.query('select * from books',function(err,results){
-			if(err) throw err
-				console.log(results)
-		})
-	})*/
+var connection = mysql.createConnection({
+	host: 'localhost',
+	user: 'root',
+	password: 'yash',
+	database: 'book'
 })
-
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req , res){
@@ -109,11 +94,8 @@ io.on('connection', function(socket){
 		console.log(bookname);
 		console.log(author);
 	});
-
+/*
 	socket.on('getData', function(data){
 		socket.emit('recieveData' , );
-	});
+	});*/
 });
-
-
-
