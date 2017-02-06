@@ -1,0 +1,19 @@
+{
+  "name": "bookshare",
+  "version": "1.0.0",
+  "description": "A bookSwaping web app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shaddygarg/bookshare.git"
+  },
+  "author": "Shaddy Garg,Yash Agrawal,Vishal Sharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shaddygarg/bookshare/issues"
+  },
+  "homepage": "https://github.com/shaddygarg/bookshare#readme"
+}
