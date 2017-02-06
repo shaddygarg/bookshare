@@ -10,7 +10,8 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
 	<body>
-
+		<div id="fb-root"></div>
+		<script src="assets/js/fblogin.js"></script>
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
 
@@ -30,8 +31,7 @@
 								<li><a href="index.html">Home</a></li>
 								<li><a href="generic.html">Generic</a></li>
 								<li><a href="elements.html">Elements</a></li>
-								<li><a href="#">Log In</a></li>
-								<li><a href="#">Sign Up</a></li>
+								<li><div class="fb-login-button" scope="public_profile,email" data-show-faces="false" data-size="large"  data-auto-logout-link="true" onlogin="checkLoginState()";></div></li>
 							</ul>
 							<a href="#" class="close">Close</a>
 						</div>
@@ -100,6 +100,7 @@
 									</section>
 
 									<section>
+										<div id="status"></div>
 										<h3 class="major">Table</h3>
 										<h4>Default</h4>
 										<div class="table-wrapper">
