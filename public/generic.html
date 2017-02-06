@@ -1,12 +1,7 @@
 <!DOCTYPE HTML>
-<!--
-	Solid State by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
-		<title>Generic - Solid State by HTML5 UP</title>
+		<title>Generic - BookSwitch</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -15,13 +10,14 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
 	<body>
-
+		<div id="fb-root"></div>
+		<script src="assets/js/fblogin.js"></script>
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
 
 				<!-- Header -->
 					<header id="header">
-						<h1><a href="index.html">Solid State</a></h1>
+						<h1><a href="index.html">BookSwitch</a></h1>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -35,8 +31,7 @@
 								<li><a href="index.html">Home</a></li>
 								<li><a href="generic.html">Generic</a></li>
 								<li><a href="elements.html">Elements</a></li>
-								<li><a href="#">Log In</a></li>
-								<li><a href="#">Sign Up</a></li>
+								<li><div class="fb-login-button" scope="public_profile,email" data-show-faces="false" data-size="large"  data-auto-logout-link="true" onlogin="checkLoginState()";></div></li>
 							</ul>
 							<a href="#" class="close">Close</a>
 						</div>

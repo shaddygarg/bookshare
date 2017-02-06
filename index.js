@@ -3,19 +3,28 @@ var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var request = require('request');
-var Q = require('q');
-function getbook(name) {
-  var deferred = Q.defer();
-  request("http://pokeapi.co/api/v1/pokemon/"+name, function (error, response, body) {
-    if (response.statusCode == 200) {
-      deferred.resolve(JSON.parse(body));
-    } else {
-      deferred.reject(new Error("Error Getting Pokemon"));
-    }
-  })
-  return deferred.promise;
-}
+var mysql = require('mysql')
 
+/*var connection = mysql.createConnection({
+	host: 'localhost',
+	user: 'root',
+	password: '9914647680',
+	database: 'book'
+})
+
+connection.connect(function(err) {
+	if (err) throw err
+		console.log('You are now connected')
+	connection.query('INSERT into books(isbn,author,img) values (12,12,12)',function(err,results){
+		if(err) throw err
+			console.log('INSERTED')
+		connection.query('select * from books',function(err,results){
+			if(err) throw err
+				console.log(results)
+		})
+	})
+})
+*/
 
 app.use(express.static(__dirname + '/public'));
 
