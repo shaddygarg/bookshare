@@ -17,31 +17,6 @@ var connection = mysql.createConnection({
 	password: '9914647680',
 	database: 'book'
 })
-
-connection.connect(function(err) {
-	var isbn="123",name="123",author="ld",description="dij",img="djk";
-	if (err) throw err
-		console.log('You are now connected')
-	connection.query('INSERT INTO books(ISBN,name,author,description,img) VALUES (?,?,?,?,?)',[isbn,name,author,description,img],function(err,results){
-		if(err) throw err
-			connection.query('SELECT COUNT(*) AS r FROM books',function(err,results){
-				if(err) throw err
-					var x = results;
-				var n = x[0].r;
-				connection.query('SELECT * FROM books',function(err,results){
-					if(err) throw err
-						for(var i=0;i<n;i++){
-							console.log(i+1+".");
-							console.log(results[i].ISBN);
-							console.log(results[i].name);
-							console.log(results[i].author);
-							console.log(results[i].description);
-							console.log(results[i].img);
-						}
-					})
-			})
-	})
-})
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req , res){
@@ -78,6 +53,29 @@ io.on('connection', function(socket){
 					console.log(author);
 					console.log(description);
 					console.log(img);
+					connection.connect(function(err) {
+						if (err) throw err
+							console.log('You are now connected')
+						connection.query('INSERT INTO books(ISBN,name,author,description,img) VALUES (?,?,?,?,?)',[isbn,bookname,author,description,img],function(err,results){
+							if(err) throw err
+								connection.query('SELECT COUNT(*) AS r FROM books',function(err,results){
+									if(err) throw err
+										var x = results;
+									var n = x[0].r;
+									connection.query('SELECT * FROM books',function(err,results){
+										if(err) throw err
+											for(var i=0;i<n;i++){
+												console.log(i+1+".");
+												console.log(results[i].ISBN);
+												console.log(results[i].name);
+												console.log(results[i].author);
+												console.log(results[i].description);
+												console.log(results[i].img);
+											}
+										})
+								})
+						})
+					})
 				}
 				else{
 					socket.emit('rply' , "Book not available");
@@ -87,6 +85,7 @@ io.on('connection', function(socket){
 				socket.emit('rply' , "Book not available");
 			}
 		});
+
 	});
 
 	socket.on('name' , function(data){
