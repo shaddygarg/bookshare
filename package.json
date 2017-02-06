@@ -13,13 +13,14 @@
   "author": "Shaddy Garg,Yash Agrawal,Vishal Sharma",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.10.6",
-    "mysql": "^2.5.4",
-    "socket.io":"^1.7.2"
+    "body-parser": "^1.16.0",
+    "express": "^4.14.1",
+    "mysql": "^2.13.0",
+    "request": "^2.79.0",
+    "socket.io": "^1.7.2"
   },
   "bugs" : {
     "url": "https://github.com/shaddygarg/bookshare/issues"
   },
   "homepage": "https://github.com/shaddygarg/bookshare#readme"
 }
-

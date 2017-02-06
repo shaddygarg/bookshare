@@ -1,0 +1,564 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"s",
+				"style\tAttr"
+			],
+			[
+				"margi",
+				"margin-left"
+			],
+			[
+				"a",
+				"a"
+			],
+			[
+				"i",
+				"i"
+			],
+			[
+				"over",
+				"overflow-x"
+			],
+			[
+				"dis",
+				"displayedImage"
+			],
+			[
+				"jo",
+				"joinRoom"
+			],
+			[
+				"create",
+				"createRoom"
+			],
+			[
+				"ro",
+				"roomlist"
+			],
+			[
+				"ma",
+				"margin-top"
+			],
+			[
+				"al",
+				"align-items"
+			],
+			[
+				"St",
+				"style\tAttr"
+			],
+			[
+				"ali",
+				"align-content"
+			],
+			[
+				"align",
+				"align-items"
+			],
+			[
+				"Style",
+				"stylesheet"
+			],
+			[
+				"me",
+				"me"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"fon",
+				"font-family"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"border-r",
+				"border-radius"
+			],
+			[
+				"re",
+				"require"
+			],
+			[
+				"paddi",
+				"padding"
+			],
+			[
+				"lis",
+				"list-style-type"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"co",
+				"console"
+			],
+			[
+				"S",
+				"Stylesheet"
+			],
+			[
+				"crea",
+				"createReadStream"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"overflow",
+				"overflow-y"
+			],
+			[
+				"css",
+				"css"
+			],
+			[
+				"write",
+				"writeHead"
+			],
+			[
+				"order",
+				"orderno"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/vishal/JAVA/game.java",
+			"settings":
+			{
+				"buffer_size": 327,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "class game{"
+			}
+		},
+		{
+			"file": "/home/vishal/JAVA/helloWorld.cpp",
+			"settings":
+			{
+				"buffer_size": 286,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "#include <iostream>"
+			}
+		},
+		{
+			"file": "index.js",
+			"settings":
+			{
+				"buffer_size": 337,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/vishal/Downloads/Chat-Application-With-Facebook-Authentication-master/app.js",
+			"settings":
+			{
+				"buffer_size": 1930,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/vishal/Chatbox/server.js",
+			"settings":
+			{
+				"buffer_size": 1164,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/vishal/bookshare"
+	],
+	"file_history":
+	[
+		"/home/vishal/bookshare/package.json",
+		"/home/vishal/Downloads/Chat-Application-With-Facebook-Authentication-master/views/index.html",
+		"/home/vishal/Downloads/Chat-Application-With-Facebook-Authentication-master/socket/socket.js",
+		"/home/vishal/JAVA/login.html",
+		"/home/vishal/Chatbox/server.js",
+		"/home/vishal/Documents/<!DOCTYPE html>.html",
+		"/home/vishal/Downloads/ydlamba.github.io-master/index.html",
+		"/home/vishal/Downloads/ydlamba.github.io-master/styles/main.css",
+		"/home/vishal/Downloads/ydlamba.github.io-master/scripts/script.js",
+		"/home/vishal/Downloads/Untitled Folder (2)/style.css",
+		"/home/vishal/Downloads/Untitled Folder (2)/index.html",
+		"/home/vishal/Downloads/aboutme2.0-master/script/main.js",
+		"/home/vishal/Downloads/SlitSlider-master/js/jquery.slitslider.js",
+		"/home/vishal/Downloads/FirstPage-master/Index.htm",
+		"/home/vishal/Downloads/SlitSlider-master/index.html",
+		"/home/vishal/Downloads/Main.java",
+		"/home/vishal/Image-gallery/main.js",
+		"/home/vishal/Image-gallery/index.html",
+		"/home/vishal/Downloads/four_directions-master/js/script.js",
+		"/home/vishal/Lamborghini/Stylesheet.css",
+		"/home/vishal/Lamborghini/script.js",
+		"/home/vishal/Lamborghini/vishal.html",
+		"/home/vishal/keys",
+		"/home/vishal/untitled",
+		"/home/vishal/Downloads/imgShow-master/imgShow.js",
+		"/home/vishal/Image-gallery/style.css",
+		"/home/vishal/Canvas/script.js",
+		"/home/vishal/Canvas/canvas.html",
+		"/home/vishal/Canvas/first.java",
+		"/home/vishal/Downloads/quickview_library-master/library.css",
+		"/home/vishal/Downloads/quickview_library-master/library.html",
+		"/home/vishal/Downloads/quickview_library-master/library.js",
+		"/home/vishal/chess/serve.js",
+		"/home/vishal/chess/room.js",
+		"/home/vishal/Documents/app.js",
+		"/home/vishal/Chatbox/Stylesheet.css",
+		"/home/vishal/Downloads/Gallery-popup-master/a.html",
+		"/home/vishal/Downloads/Gallery-popup-master/b.css",
+		"/home/vishal/Chatbox/RoomChatRoom.js",
+		"/home/vishal/Chatbox/RoomChatIndex.html",
+		"/home/vishal/Chatbox/RoomChatServer.js",
+		"/home/vishal/Chatbox/RoomChatScript.js",
+		"/home/vishal/Chatbox/index.html",
+		"/home/vishal/Chatbox/script.js",
+		"/home/vishal/chess/views/room.ejs",
+		"/home/vishal/chess/public/css/gamePage.css",
+		"/home/vishal/CHESS/chess/public/game.html",
+		"/home/vishal/CHESS/chess/chess.js",
+		"/home/vishal/CHESS/chess/public/js/room.js",
+		"/home/vishal/Documents/vishal.html",
+		"/home/vishal/Documents/Stylesheet.css",
+		"/home/vishal/Chatbox/package.json",
+		"/home/vishal/Chatbox/node_modules/roomChatindex.html",
+		"/home/vishal/Documents/practice.html",
+		"/home/vishal/untitled.html",
+		"/home/vishal/chatboxexample/index.html",
+		"/home/vishal/chabox/server.js",
+		"/home/vishal/chabox/main.css",
+		"/home/vishal/Documents/Chat.js",
+		"/home/vishal/chabox/package.json",
+		"/home/vishal/chatboxexample/main.css",
+		"/home/vishal/iochat/index.html",
+		"/home/vishal/iochat/server.js",
+		"/home/vishal/iochat/package.json",
+		"/home/vishal/Documents/index.html",
+		"/home/vishal/Documents/movies.js",
+		"/home/vishal/Documents/mohit.js",
+		"/home/vishal/Documents/Stylesheet1.css",
+		"/home/vishal/Documents/chatprocess.php",
+		"/home/vishal/Documents/Stylesheet.1css",
+		"/home/vishal/Documents/vishal.js",
+		"/home/vishal/Vishal/To-do-list",
+		"/home/vishal/Vishal/To do list"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"padding:0 30%"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/vishal/JAVA/game.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 327,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								320,
+								320
+							]
+						],
+						"settings":
+						{
+							"auto_name": "class game{",
+							"syntax": "Packages/Java/Java.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/vishal/JAVA/helloWorld.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 286,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								37,
+								37
+							]
+						],
+						"settings":
+						{
+							"auto_name": "#include <iostream>",
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 337,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								132,
+								132
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/vishal/Downloads/Chat-Application-With-Facebook-Authentication-master/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1930,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/home/vishal/Chatbox/server.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1164,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								131,
+								95
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "bookshare.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
