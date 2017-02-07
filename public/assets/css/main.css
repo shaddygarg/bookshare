@@ -2753,6 +2753,14 @@
 			#header h1 a {
 				border: 0;
 			}
+		#header img{
+			top: 0.7em;
+    		right: 0.7em;
+  			height: 2.5em;
+  			position: absolute;
+		}
+
+
 
 		#header nav {
 			font-family: Raleway, Helvetica, sans-serif;
@@ -2762,7 +2770,7 @@
 			letter-spacing: 0.1em;
 			line-height: 3em;
 			position: absolute;
-			right: 0.7em;
+			right: 5em;
 			text-transform: uppercase;
 			top: 0.7em;
 		}
