@@ -123,11 +123,15 @@ io.on('connection', function(socket){
 	});
 
 	connection.connect(function(err) {
-		//				if (err) throw err
-			console.log('You are now connected')
-		connection.query('SELECT * FROM books',function(err,results){
-			if(err) throw err
-				socket.emit('recieveData' ,results[0].name );
+		if (err) throw err
+		console.log('You are now connected')
+		socket.on('getData', function(data){
+			connection.query('SELECT * FROM books',function(err,results){
+				if(err) throw err
+					console.log(results)
+				socket.emit('recieveData' ,results);
+			})
+
 		})
 	})
 })
