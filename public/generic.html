@@ -1,20 +1,22 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-	<title>Generic - BookSwitch</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-</head>
-<body>
-	<div id="fb-root"></div>
-	<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
-	<script src="assets/js/fblogin.js"></script>
-	<!-- Page Wrapper -->
-	<div id="page-wrapper">
+	<head>
+		<title>Generic - BookSwitch</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+	</head>
+	<body>
+		<div id="fb-root"></div>
+		<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+		<script src="assets/js/fblogin.js"></script>
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
 
 		<!-- Header -->
 		<header id="header">
@@ -60,11 +62,6 @@
 					<span id="books"></span>
 
 					
-
-				</div>
-			</div>
-
-		</section>
 
 		<!-- Footer -->
 		<section id="footer">
@@ -115,14 +112,16 @@
 	<script src="assets/js/util.js"></script>
 	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 	<script src="assets/js/main.js"></script>
-	<script>
+<script>
 		var socket = io();
 		socket.emit('getData' , "getdata");
 		socket.on('recieveData', function(data){
 			console.log(data);
-			var len = data.length();
+
+			var len = data.length;
 			console.log(len);
-			for(var i=0;i<len;i++){
+			$( "#books" ).append('<div class="bookData" style="display:flex; justify-content:space-around;width:100%;"><div style="width:30%">'+'ISBN'+'</div><div style="width:30%">'+'Name'+'</div><div style="width:30%">'+'Author'+'</div></div><br><br>');
+			for(var i in data){
 				$( "#books" ).append('<div class="bookData" style="display:flex; justify-content:space-around;width:100%;"><div style="width:30%">'+data[i].ISBN+'</div><div style="width:30%">'+data[i].name+'</div><div style="width:30%">'+data[i].author+'</div></div><br><br>');
 			}
 		});

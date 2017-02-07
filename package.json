@@ -19,7 +19,7 @@
     "request": "^2.79.0",
     "socket.io": "^1.7.2"
   },
-  "bugs": {
+  "bugs" : {
     "url": "https://github.com/shaddygarg/bookshare/issues"
   },
   "homepage": "https://github.com/shaddygarg/bookshare#readme"

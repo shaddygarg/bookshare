@@ -4,9 +4,15 @@ function statusChangeCallback(response) {
  console.log(response);
  if (response.status === 'connected') {
   testAPI();
+  document.getElementById("submitInfo").disabled = false;
+  document.getElementById("infol").style.visibility = "hidden";
 } else if (response.status === 'not_authorized') {
+  document.getElementById("submitInfo").disabled = true;
+  document.getElementById("infol").style.visibility = "visible";
   document.getElementById('status').innerHTML = 'Please log ' + 'into this app.';
 } else {
+  document.getElementById("submitInfo").disabled = true;
+  document.getElementById("infol").style.visibility = "visible";
   document.getElementById('status').innerHTML = 'Please log ' + 'into Facebook.';
 }
 }
