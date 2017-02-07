@@ -132,8 +132,8 @@
 			<script>
 				var socket = io();
 				socket.emit('getData' , "getdata");
-				socket.emit('recieveData', function(data){
-					
+				socket.on('recieveData', function(data){
+					console.log(data);
 				});
 			</script>
 	</body>

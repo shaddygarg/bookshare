@@ -17,6 +17,12 @@ var connection = mysql.createConnection({
 	password: 'yash',
 	database: 'book'
 })
+var connection1 = mysql.createConnection({
+	host: 'localhost',
+	user: 'root',
+	password: 'yash',
+	database: 'response'
+})
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req , res){
@@ -54,7 +60,7 @@ io.on('connection', function(socket){
 					console.log(description);
 					console.log(img);
 					connection.connect(function(err) {
-						if (err) throw err
+						if(err) throw err                            
 							console.log('You are now connected')
 						connection.query('INSERT INTO books(ISBN,name,author,description,img) VALUES (?,?,?,?,?)',[isbn,bookname,author,description,img],function(err,results){
 							if(err) throw err
@@ -91,11 +97,41 @@ io.on('connection', function(socket){
 	socket.on('name' , function(data){
 		var	bookname = data.name;
 		var author = data.author;
-		console.log(bookname);
-		console.log(author);
+		connection.connect(function(err) {
+			//if (err) throw err
+				console.log('You are now connected')
+			connection.query('INSERT INTO books(name,author) VALUES (?,?)',[bookname,author],function(err,results){
+				if(err) throw err
+					connection.query('SELECT COUNT(*) AS r FROM books',function(err,results){
+						if(err) throw err
+							var x = results;
+						var n = x[0].r;
+						connection.query('SELECT * FROM books',function(err,results){
+							if(err) throw err
+								for(var i=0;i<n;i++){
+									console.log(i+1+".");
+									console.log(results[i].ISBN);
+									console.log(results[i].name);
+									console.log(results[i].author);
+									console.log(results[i].description);
+									console.log(results[i].img);
+								}
+							})
+					})
+			})
+		})
 	});
-/*
-	socket.on('getData', function(data){
-		socket.emit('recieveData' , );
-	});*/
-});
+
+	connection.connect(function(err) {
+		//				if (err) throw err
+			console.log('You are now connected')
+		connection.query('SELECT * FROM books',function(err,results){
+			if(err) throw err
+				socket.emit('recieveData' ,results[0].name );
+		})
+	})
+})
+
+
+
+
