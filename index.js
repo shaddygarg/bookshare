@@ -122,7 +122,7 @@ io.on('connection', function(socket){
 		})
 	});
 
-	connection.connect(function(err) {
+/*	connection.connect(function(err) {
 		if (err) throw err
 		console.log('You are now connected')
 		socket.on('getData', function(data){
@@ -133,7 +133,7 @@ io.on('connection', function(socket){
 			})
 
 		})
-	})
+	})*/
 })
 
 
