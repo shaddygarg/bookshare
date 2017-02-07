@@ -59,24 +59,9 @@
 					<p>Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam. Proin nec commodo, vel scelerisque nisi scelerisque. Suspendisse id quam vel tortor tincidunt suscipit. Nullam auctor orci eu dolor consectetur, interdum ullamcorper ante tincidunt. Mauris felis nec felis elementum varius.</p>
 
 					<h3 class="major">Vitae phasellus</h3>
-					<ul id='mylist' style="">
-						<li>ISBN code    NAME      AUTHOR     DESCRIPTION</li> 
-					</ul>
+					<span id="books"></span>
 
-					<section class="features">
-						<article>
-							<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-							<h3 class="major">Sed feugiat lorem</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-							<a href="#" class="special">Learn more</a>
-						</article>
-						<article>
-							<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-							<h3 class="major">Nisl placerat</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-							<a href="#" class="special">Learn more</a>
-						</article>
-					</section>
+					
 
 		<!-- Footer -->
 		<section id="footer">
@@ -132,6 +117,7 @@
 		socket.emit('getData' , "getdata");
 		socket.on('recieveData', function(data){
 			console.log(data);
+
 			var len = data.length;
 			console.log(len);
 			$( "#books" ).append('<div class="bookData" style="display:flex; justify-content:space-around;width:100%;"><div style="width:30%">'+'ISBN'+'</div><div style="width:30%">'+'Name'+'</div><div style="width:30%">'+'Author'+'</div></div><br><br>');

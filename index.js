@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 var connection = mysql.createConnection({
 	host: 'localhost',
 	user: 'root',
-	password: '9914647680',
+	password: '12345',
 	database: 'book'
 })
 app.use(express.static(__dirname + '/public'));
@@ -48,18 +48,14 @@ connection.connect(function(err) {
 			var description= 'none';
 			var img = 'none';
 			request("https://www.googleapis.com/books/v1/volumes?q=isbn:"+data.msg, function (error, response, body) {
-				if (!error && response.statusCode == 200) {
+				if (!error) {
 					var info = JSON.parse(body)
-					if(info.totalItems==1){
+					if(info.totalItems!==0){
 						bookname = info.items[0].volumeInfo.title;
 						isbn = data.msg;
 						author = info.items[0].volumeInfo.authors[0];
 						description = info.items[0].volumeInfo.description;
 						img = info.items[0].volumeInfo.imageLinks.thumbnail;
-						console.log(isbn);
-						console.log(author);
-						console.log(description);
-						console.log(img);
 						connection.query('INSERT INTO books(ISBN,name,author,description,img) VALUES (?,?,?,?,?)',[isbn,bookname,author,description,img],function(err,results){
 							if(err) throw err
 								connection.query('SELECT COUNT(*) AS r FROM books',function(err,results){
