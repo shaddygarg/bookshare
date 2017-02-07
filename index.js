@@ -93,7 +93,7 @@ io.on('connection', function(socket){
 		var	bookname = data.name;
 		var author = data.author;
 		connection.connect(function(err) {
-			//if (err) throw err
+			if (err) throw err
 				console.log('You are now connected')
 			connection.query('INSERT INTO books(name,author) VALUES (?,?)',[bookname,author],function(err,results){
 				if(err) throw err
