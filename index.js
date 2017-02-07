@@ -99,7 +99,7 @@ connection.connect(function(err) {
 				if(err) throw err
 					connection.query('SELECT COUNT(*) AS r FROM books',function(err,results){
 						if(err) throw err
-							var xl= results;
+							var x= results;
 						var n = x[0].r;
 						connection.query('SELECT * FROM books',function(err,results){
 							if(err) throw err
