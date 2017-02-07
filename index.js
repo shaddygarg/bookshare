@@ -44,6 +44,7 @@ connection.connect(function(err) {
 
 		socket.on('isbn' , function(data){
 			var user = 'none';
+			var useriden='none';
 			var	bookname = 'none';
 			var isbn = 'none';
 			var author = 'none';
@@ -57,7 +58,9 @@ connection.connect(function(err) {
 						isbn = data.msg;
 						author = info.items[0].volumeInfo.authors[0];
 						user = data.username;
-						connection.query('INSERT INTO books(ISBN,name,author,user) VALUES (?,?,?,?)',[isbn,bookname,author,user],function(err,results){
+						useriden = data.userid;
+						
+						connection.query('INSERT INTO books(ISBN,name,author,user,userid) VALUES (?,?,?,?,?)',[isbn,bookname,author,user,useriden],function(err,results){
 							if(err) throw err
 								connection.query('SELECT COUNT(*) AS r FROM books',function(err,results){
 									if(err) throw err
@@ -92,8 +95,9 @@ connection.connect(function(err) {
 		socket.on('name' , function(data){
 			var	bookname = data.name;
 			var author = data.author;
-			var username = data.username;
-			connection.query('INSERT INTO books(name,author,user) VALUES (?,?,?)',[bookname,author,user],function(err,results){
+			var user = data.username;
+			var useriden = data.userid;
+			connection.query('INSERT INTO books(name,author,user,userid) VALUES (?,?,?,?)',[bookname,author,user,useriden],function(err,results){
 				if(err) throw err
 					connection.query('SELECT COUNT(*) AS r FROM books',function(err,results){
 						if(err) throw err

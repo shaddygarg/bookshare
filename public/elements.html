@@ -139,6 +139,7 @@
 					<ul class="copyright">
 						<li>&copy; TeamS3ven  Inc. All rights reserved.</li>
 				</div>
+				<div id="userid" style="display: none;"></div>
 			</section>
 
 		</div>
@@ -154,9 +155,10 @@
 		var socket = io();
 		$('#chat').submit(function(){
 			var user = $('#status').text();
+			var userid = $('#userid').text();
 			var s = $('#isbn').val()
 			if(s!==""){
-				socket.emit('isbn',{'msg': $('#isbn').val(), 'username':$('#status').text()} );
+				socket.emit('isbn',{'msg': $('#isbn').val(), 'username':$('#status').text(), 'userid':$('#userid').text()} );
 				$('#name').val('');
 				$('#author').val('');
 				$('#isbn').val('');
@@ -167,7 +169,7 @@
 				var t = $('#name').val();
 				var u = $('#author').val();
 				if((t!=="")&&(u!=="")){
-					socket.emit('name' , {'name': t, 'author': u, 'username':$('#status').text()});
+					socket.emit('name' , {'name': t, 'author': u, 'username':$('#status').text(),'userid':$('#userid').text()});
 				}
 				$('#name').val('');
 				$('#author').val('');
