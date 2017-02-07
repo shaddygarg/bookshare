@@ -4,7 +4,7 @@
   "description": "A bookSwaping web app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start" : "node server.js" 
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,10 @@
     "mysql": "^2.13.0",
     "request": "^2.79.0",
     "socket.io": "^1.7.2"
+  },
+
+  "engines": {
+    "node": "4.2.6"
   },
   "bugs" : {
     "url": "https://github.com/shaddygarg/bookshare/issues"
