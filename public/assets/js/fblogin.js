@@ -5,13 +5,16 @@ function statusChangeCallback(response) {
  if (response.status === 'connected') {
   testAPI();
   document.getElementById("submitInfo").disabled = false;
+  document.getElementById("profileImage").disabled = false;
   document.getElementById("infol").style.visibility = "hidden";
 } else if (response.status === 'not_authorized') {
   document.getElementById("submitInfo").disabled = true;
+  document.getElementById("profileImage").disabled = true;
   document.getElementById("infol").style.visibility = "visible";
   document.getElementById('status').innerHTML = 'Please log ' + 'into this app.';
 } else {
   document.getElementById("submitInfo").disabled = true;
+  document.getElementById("profileImage").disabled = true;
   document.getElementById("infol").style.visibility = "visible";
   document.getElementById('status').innerHTML = 'Please log ' + 'into Facebook.';
 }
@@ -48,7 +51,17 @@ function testAPI() {
  console.log('Welcome!  Fetching your information.... ');
  FB.api('/me', function(response) {
    console.log('Successful login for: ' + response.name);
-   document.getElementById('status').innerHTML =
-   'Thanks for logging in, ' + response.name + '!';
+   document.getElementById('status').innerHTML ='Thanks for logging in, ' + response.name + '!';
+
+
+
+   fbinfo = new Array();
+  fbinfo[0] = response.id;
+  fbinfo[1] = response.email;
+    for (var k=0;k<2;k++){
+      console.log(fbinfo[k]);
+    }
+     var im = document.getElementById("profileImage").setAttribute("src", "http://graph.facebook.com/" + response.id + "/picture?type=normal");
+    
  });
 }
