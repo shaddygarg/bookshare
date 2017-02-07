@@ -17,12 +17,7 @@ var connection = mysql.createConnection({
 	password: 'yash',
 	database: 'book'
 })
-var connection1 = mysql.createConnection({
-	host: 'localhost',
-	user: 'root',
-	password: 'yash',
-	database: 'response'
-})
+
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req , res){
@@ -121,8 +116,7 @@ io.on('connection', function(socket){
 			})
 		})
 	});
-
-/*	connection.connect(function(err) {
+	connection.connect(function(err) {
 		if (err) throw err
 		console.log('You are now connected')
 		socket.on('getData', function(data){
@@ -133,7 +127,7 @@ io.on('connection', function(socket){
 			})
 
 		})
-	})*/
+	})
 })
 
 
