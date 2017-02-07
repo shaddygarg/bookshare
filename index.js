@@ -43,6 +43,7 @@ connection.connect(function(err) {
 		});
 
 		socket.on('isbn' , function(data){
+			var user = 'none';
 			var	bookname = 'none';
 			var isbn = 'none';
 			var author = 'none';
@@ -55,9 +56,8 @@ connection.connect(function(err) {
 						bookname = info.items[0].volumeInfo.title;
 						isbn = data.msg;
 						author = info.items[0].volumeInfo.authors[0];
-						description = info.items[0].volumeInfo.description;
-						img = info.items[0].volumeInfo.imageLinks.thumbnail;
-						connection.query('INSERT INTO books(ISBN,name,author,description,img) VALUES (?,?,?,?,?)',[isbn,bookname,author,description,img],function(err,results){
+						user = data.username;
+						connection.query('INSERT INTO books(ISBN,name,author,user) VALUES (?,?,?,?)',[isbn,bookname,author,user],function(err,results){
 							if(err) throw err
 								connection.query('SELECT COUNT(*) AS r FROM books',function(err,results){
 									if(err) throw err
@@ -71,8 +71,7 @@ connection.connect(function(err) {
 											console.log(results[i].ISBN);
 											console.log(results[i].name);
 											console.log(results[i].author);
-											console.log(results[i].description);
-											console.log(results[i].img);
+											console.log(results[i].user);
 										}
 									})
 								})
@@ -93,7 +92,8 @@ connection.connect(function(err) {
 		socket.on('name' , function(data){
 			var	bookname = data.name;
 			var author = data.author;
-			connection.query('INSERT INTO books(name,author) VALUES (?,?)',[bookname,author],function(err,results){
+			var username = data.username;
+			connection.query('INSERT INTO books(name,author,user) VALUES (?,?,?)',[bookname,author,user],function(err,results){
 				if(err) throw err
 					connection.query('SELECT COUNT(*) AS r FROM books',function(err,results){
 						if(err) throw err

@@ -153,9 +153,10 @@
 		<script>
 		var socket = io();
 		$('#chat').submit(function(){
+			var user = $('#status').text();
 			var s = $('#isbn').val()
 			if(s!==""){
-				socket.emit('isbn',{'msg': $('#isbn').val()} );
+				socket.emit('isbn',{'msg': $('#isbn').val(), 'username':$('#status').text()} );
 				$('#name').val('');
 				$('#author').val('');
 				$('#isbn').val('');
@@ -166,7 +167,7 @@
 				var t = $('#name').val();
 				var u = $('#author').val();
 				if((t!=="")&&(u!=="")){
-					socket.emit('name' , {'name': t, 'author': u});
+					socket.emit('name' , {'name': t, 'author': u, 'username':$('#status').text()});
 				}
 				$('#name').val('');
 				$('#author').val('');
