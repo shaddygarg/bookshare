@@ -51,17 +51,7 @@ function testAPI() {
  console.log('Welcome!  Fetching your information.... ');
  FB.api('/me', function(response) {
    console.log('Successful login for: ' + response.name);
-   document.getElementById('status').innerHTML ='Thanks for logging in, ' + response.name + '!';
-
-
-
-   fbinfo = new Array();
-  fbinfo[0] = response.id;
-  fbinfo[1] = response.email;
-    for (var k=0;k<2;k++){
-      console.log(fbinfo[k]);
-    }
+   document.getElementById('status').innerHTML ='Hi! ' + response.name;
      var im = document.getElementById("profileImage").setAttribute("src", "http://graph.facebook.com/" + response.id + "/picture?type=normal");
-    
  });
 }

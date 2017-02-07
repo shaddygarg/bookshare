@@ -2761,6 +2761,11 @@
 		}
 
 
+				#status{
+			    position: absolute;
+ 			    top: 0.1em;
+    			right: 11em;
+}
 
 		#header nav {
 			font-family: Raleway, Helvetica, sans-serif;
