@@ -1,20 +1,22 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-	<title>Generic - BookSwitch</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-</head>
-<body>
-	<div id="fb-root"></div>
-	<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
-	<script src="assets/js/fblogin.js"></script>
-	<!-- Page Wrapper -->
-	<div id="page-wrapper">
+	<head>
+		<title>Generic - BookSwitch</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+	</head>
+	<body>
+		<div id="fb-root"></div>
+		<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+		<script src="assets/js/fblogin.js"></script>
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
 
 		<!-- Header -->
 		<header id="header">
@@ -57,11 +59,24 @@
 					<p>Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam. Proin nec commodo, vel scelerisque nisi scelerisque. Suspendisse id quam vel tortor tincidunt suscipit. Nullam auctor orci eu dolor consectetur, interdum ullamcorper ante tincidunt. Mauris felis nec felis elementum varius.</p>
 
 					<h3 class="major">Vitae phasellus</h3>
-					<span id='books'></span>
-				</div>
-			</div>
+					<ul id='mylist' style="">
+						<li>ISBN code    NAME      AUTHOR     DESCRIPTION</li> 
+					</ul>
 
-		</section>
+					<section class="features">
+						<article>
+							<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
+							<h3 class="major">Sed feugiat lorem</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+							<a href="#" class="special">Learn more</a>
+						</article>
+						<article>
+							<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
+							<h3 class="major">Nisl placerat</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+							<a href="#" class="special">Learn more</a>
+						</article>
+					</section>
 
 		<!-- Footer -->
 		<section id="footer">
