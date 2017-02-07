@@ -8,6 +8,7 @@ var mysql = require('mysql');
 var bodyParser = require('body-parser');
 
 
+app.set('port', (process.env.PORT||8080));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -23,7 +24,7 @@ app.get('/', function(req , res){
 	res.sendFile(__dirname+ '/public/index.html');
 })
 
-http.listen(8080, function(){
+http.listen(app.get('port'), function(){
 	console.log("Server running");
 });
 connection.connect(function(err) {
