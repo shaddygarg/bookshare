@@ -116,13 +116,13 @@ io.on('connection', function(socket){
 		})
 	});
 
-	socket.on('getData', function(data){
-		connection.connect(function(err) {
-			if (err) throw err
-				console.log('You are now connected')
+	connection.connect(function(err) {
+		console.log('You are now connected')
+		socket.on('getData', function(data){
 			connection.query('SELECT * FROM books',function(err,results){
 				if(err) throw err
-					socket.emit('recieveData' ,results[0].name );
+					console.log(results)
+				socket.emit('recieveData' ,results);
 			})
 		})
 	})
