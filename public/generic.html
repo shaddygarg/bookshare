@@ -78,7 +78,6 @@
 						</article>
 					</section>
 
-
 		<!-- Footer -->
 		<section id="footer">
 			<div class="inner">
@@ -128,19 +127,17 @@
 	<script src="assets/js/util.js"></script>
 	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 	<script src="assets/js/main.js"></script>
-	<script>
+<script>
 		var socket = io();
 		socket.emit('getData' , "getdata");
 		socket.on('recieveData', function(data){
 			console.log(data);
-			var len = data.len;
+			var len = data.length;
 			console.log(len);
-			//for(var i=0;i<len;i++){
-           var node = document.createElement("LI");
-           var textnode = document.createTextNode(data[0].isbn+"    "+data[0].name+"   "+data[0].author+"    "+data[0].description);
-           node.appendChild(textnode);
-           document.getElementById("mylist").appendChild(node);
-//}
+			$( "#books" ).append('<div class="bookData" style="display:flex; justify-content:space-around;width:100%;"><div style="width:30%">'+'ISBN'+'</div><div style="width:30%">'+'Name'+'</div><div style="width:30%">'+'Author'+'</div></div><br><br>');
+			for(var i in data){
+				$( "#books" ).append('<div class="bookData" style="display:flex; justify-content:space-around;width:100%;"><div style="width:30%">'+data[i].ISBN+'</div><div style="width:30%">'+data[i].name+'</div><div style="width:30%">'+data[i].author+'</div></div><br><br>');
+			}
 		});
 	</script>
 </body>
